@@ -9,7 +9,7 @@ It serves as a *high-level reference* to understand what Data Science is, why it
 
 *Data Science* is the process of *collecting, cleaning, analyzing, and interpreting data* to make informed decisions.
 
-It combines:
+It combines:-
 - Mathematics & Statistics
 - Programming
 - Domain knowledge
