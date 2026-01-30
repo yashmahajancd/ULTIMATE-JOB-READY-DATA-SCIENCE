@@ -133,7 +133,7 @@ Widely used in APIs and data storage.
 
 ---
 
-## Object-Oriented Programming (OOP)
+## Object-Oriented Programming (OOPS)
 
 - Classes and objects
 - Encapsulation and abstraction
