@@ -140,7 +140,7 @@ Widely used in APIs and data storage.
 - Inheritance and polymorphism
 - Class methods & static methods
 
-OOP helps in:
+OOPS helps in:
 - Writing scalable code
 - Structuring ML projects
 - Reusability and maintainability
