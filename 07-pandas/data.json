@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Sonu",
+    "school": "WDP",
+    "marks": 34
+  },
+  {
+    "name": "Bhavesh",
+    "school": "SPS",
+    "marks": 45
+  },
+  {
+    "name": "Dattatray",
+    "school": "RTS",
+    "marks": 52
+  },
+  {
+    "name": "Sherya",
+    "school": "PSF",
+    "marks": 69
+  },
+  {
+    "name": "Komal",
+    "school": "UPS",
+    "marks": 71
+  },
+  {
+    "name": "Namrata",
+    "school": "HIC",
+    "marks": 61
+  },
+  {
+    "name": "Kashish",
+    "school": "RRY",
+    "marks": 59
+  },
+  {
+    "name": "Hitesh",
+    "school": "UIS",
+    "marks": 31
+  }
+]
