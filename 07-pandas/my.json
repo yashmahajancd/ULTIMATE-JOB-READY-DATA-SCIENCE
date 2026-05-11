@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Yash",
+        "address": {
+            "city": "Delhi",
+            "zipcode": 110001
+        }
+    },
+    {
+        "id": 2,
+        "name": "Bhavesh",
+        "address": {
+            "city": "Mumbai",
+            "zipcode": 400001
+        }
+    }
+]
