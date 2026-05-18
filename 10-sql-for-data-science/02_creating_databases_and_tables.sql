@@ -1,4 +1,5 @@
--- Creating a Database
+------ Creating a Database ------
+---------------------------------
 CREATE DATABASE student_db;
 CREATE DATABASE student;
 
@@ -15,7 +16,8 @@ USE student_db;
 DROP DATABASE student;
 
 
--- Creating a Table in MySQL
+------ Creating a Table in MySQL ------
+---------------------------------------
 CREATE TABLE students (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100),
@@ -44,6 +46,7 @@ SELECT * FROM students;
 
 
 ------ Modifying a Table in MySQL ------
+----------------------------------------
 
 -- Renaming a Table
 RENAME TABLE students TO vtp_students;
