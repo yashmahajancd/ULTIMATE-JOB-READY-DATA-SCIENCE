@@ -20,3 +20,11 @@ for train_index, test_index in split.split(housing, housing["income_cat"]):
 
 # We will work on the copy of training data
 housing = strat_train_set.copy()
+
+# 3. Seperate features and lables
+housing_lables = housing["median_house_value"].copy()
+housing = housing.drop("median_house_value", axis=1)
+
+# 4. Seperate numerical and categorical columns
+num_attribs = housing.drop("ocean_proximity", axis=1).columns.to_list()   # ['longitude', 'latitude', 'housing_median_age', 'total_rooms', 'total_bedrooms', 'population', 'households', 'median_income']
+cat_attribs = ["ocean_proximity"]
