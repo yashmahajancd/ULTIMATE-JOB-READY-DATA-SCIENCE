@@ -71,3 +71,10 @@ dec_reg.fit(housing_prepared, housing_labels)
 dec_preds = dec_reg.predict(housing_prepared)
 dec_rmse = root_mean_squared_error(housing_labels, dec_preds)
 print(f"The root mean squared error for Decision Tree is {dec_rmse}")
+
+# Random Forest Model
+random_forest_reg = RandomForestRegressor()
+random_forest_reg.fit(housing_prepared, housing_labels)
+random_forest_preds = random_forest_reg.predict(housing_prepared)
+random_forest_rmse = root_mean_squared_error(housing_labels, random_forest_preds)
+print(f"The root mean squared error for Random Forest is {random_forest_rmse}")
