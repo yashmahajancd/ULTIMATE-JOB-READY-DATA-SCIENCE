@@ -63,4 +63,11 @@ lin_reg = LinearRegression()
 lin_reg.fit(housing_prepared, housing_labels)
 lin_preds = lin_reg.predict(housing_prepared)
 lin_rmse = root_mean_squared_error(housing_labels, lin_preds)
-print(lin_rmse)
+print(f"The root mean squared error for Linear Regression is {lin_rmse}")
+
+# Decision Tree Model
+dec_reg = DecisionTreeRegressor()
+dec_reg.fit(housing_prepared, housing_labels)
+dec_preds = dec_reg.predict(housing_prepared)
+dec_rmse = root_mean_squared_error(housing_labels, dec_preds)
+print(f"The root mean squared error for Decision Tree is {dec_rmse}")
