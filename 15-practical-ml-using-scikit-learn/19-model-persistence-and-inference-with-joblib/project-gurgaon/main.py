@@ -36,3 +36,23 @@ def build_pipeline(num_attribs, cat_attribs):
     ])
 
     return full_pipeline
+
+if not os.path.exists(MODEL_FILE):
+    # Lets train the model
+    housing = pd.read_csv("housing.csv")
+
+    # Create a stratified test set
+    housing["income_cat"] = pd.cut(housing["median_income"], bins=[0.0, 1.5, 3.0, 4.5, 6.0, np.inf], labels=[1, 2, 3, 4, 5])
+
+    split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
+
+    for train_index, test_index in split.split(housing, housing["income_cat"]):
+        housing = housing.loc[train_index].drop("income_cat", axis=1)
+
+    housing_labels = housing["median_house_value"].copy()
+    housing_features = housing.drop("median_house_value", axis=1)
+
+    num_attribs = housing.drop("ocean_proximity", axis=1).columns.to_list()
+    cat_attribs = ["ocean_proximity"]
+
+    pipeline = build_pipeline(num_attribs, cat_attribs)
