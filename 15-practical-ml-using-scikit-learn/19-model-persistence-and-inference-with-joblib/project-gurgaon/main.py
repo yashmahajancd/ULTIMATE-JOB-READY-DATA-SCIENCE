@@ -52,7 +52,16 @@ if not os.path.exists(MODEL_FILE):
     housing_labels = housing["median_house_value"].copy()
     housing_features = housing.drop("median_house_value", axis=1)
 
-    num_attribs = housing.drop("ocean_proximity", axis=1).columns.to_list()
+    num_attribs = housing_features.drop("ocean_proximity", axis=1).columns.to_list()
     cat_attribs = ["ocean_proximity"]
 
     pipeline = build_pipeline(num_attribs, cat_attribs)
+    housing_prepared = pipeline.fit_transform(housing_features)
+
+    model = RandomForestRegressor(random_state=42)
+    model.fit(housing_prepared, housing_labels)
+
+    # Save model and pipeline
+    joblib.dump(model, MODEL_FILE)
+    joblib.dump(pipeline, PIPELINE_FILE)
+    print("Model is trained. Congrats!")
